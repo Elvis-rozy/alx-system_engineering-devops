@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Connects to my server using the primary key ~/.ssh/school
 
-ssh -i ~/.ssh/school ubuntu@54.152.30.192
+ssh -i ~/.ssh/school ubuntu@34.229.254.29
