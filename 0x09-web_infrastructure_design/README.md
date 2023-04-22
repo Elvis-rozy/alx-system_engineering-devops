@@ -186,6 +186,4 @@ Repo:
 
 GitHub repository: alx-system_engineering-devops
 Directory: 0x09-web_infrastructure_design
-File: 3-scale_up
- 
-Copyright © 2023 ALX, All rights reserved.
+File: 3-scale_up.
