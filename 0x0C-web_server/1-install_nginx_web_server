@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-<<<<<<< HEAD
 #  Install nginx web server
 #  Nginx should be listening on port 80
 #  When querying Nginx at its root / with a GET request (requesting a page) 
@@ -7,16 +6,11 @@
 #  As an answer file, write a Bash script that configures a new Ubuntu machine
 #  to respect above requirements (this script will be run on the server itself)
 #  You can’t use systemctl for restarting nginx
+
 sudo apt-get update -y
 
 sudo apt-get install nginx -y
 
-echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
 
-=======
-# Bash script that Installs nginx web server
-apt-get -y update
-apt-get -y install nginx
-echo "Hello World!" > /var/www/html/index.html
->>>>>>> 49e81358fd7f36d53a718d89e0ad89e81c1a71a6
 service nginx restart
