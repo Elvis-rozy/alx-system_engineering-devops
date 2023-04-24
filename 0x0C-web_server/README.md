@@ -1,4 +1,3 @@
-Toggle navigation
 0x0C. Web server
 DevOps
 SysAdmin
