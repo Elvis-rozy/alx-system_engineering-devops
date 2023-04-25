@@ -7,24 +7,17 @@
 #  Using what you did with 3-redirection, write 4-not_found_page_404 
 #  so that it configures a brand new Ubuntu machine to the requirements 
 #  asked in this task
-apt-get update
-apt-get install -y nginx
-service nginx start
-mkdir /etc/nginx/html
-echo "Holberton School" > /etc/nginx/html/index.html
-echo "Ceci n'est pas une page" > /etc/nginx/html/404.html
-echo "server {
-    listen 80;
-    listen [::]:80 default_server;
-    root   /etc/nginx/html;
-    index  index.html;
-    location /redirect_me {
-        return 301 https://www.linkedin.com/in/elvis-oguoma;
-    }
-    error_page 404 /404.html;
-    location = /404.html{
-        root /etc/nginx/html;
-        internal;
-    }
-}" > /etc/nginx/sites-available/default
-service nginx restart
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
+
+new_str="\\\trewrite ^/redirect_me https://www.linkedin.com/in/elvis-oguoma;"
+sudo sed -i "42i $new_str" /etc/nginx/sites-available/default
+
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/error404
+
+new_str="\\\terror_page 404 /error404;"
+sudo sed -i "43i $new_str" /etc/nginx/sites-available/default
+
+sudo service nginx restart
