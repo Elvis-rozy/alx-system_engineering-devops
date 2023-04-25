@@ -4,21 +4,24 @@
 #  Your answer file should be a Puppet manifest containing commands to automatically configure an Ubuntu machine to respect above requirements
 
 package {'nginx':
-  ensure => 'installed',
+  ensure => 'present',
 }
 
-file_line { 'aaaaa':
-	ensure	=> 'present',
-	path	=> '/etc/nginx/sites-available/default',
-	after	=> listen 80 default_server;',
-	line	=> 'rewrite ^/redirect_me https://www.linkedin.com/in/elvis-oguoma;',
+exec {'install':
+	command	=>'sudo apt-get update ; sudo apt-get -y install nginx',
+	provider => shell,
 }
 
-file { '/var/www/html/index.html';
-	content	=> 'Hello World!',
+exec {'Hello World':
+	command	=> 'echo "Hello World!" | sudo dd status=none of=/var/www/html/index.html,
+	provider => shell,
 }
 
-service { 'nginx':
-	ensure	=> 'running',
-	require	=> Package['nginx'],
+exec {'sudo sed -i "s/listen 90 default_server;/listen 80 default_server;\\n\\tlocation \/redirect_me {\\n\\t\\treturn 301 https:\/\/www.youtube.com\/;\\n\\t}/" /etc/nginx/sites-available/default':
+	provider => shell,
+}
+
+exec {'run':
+	command	=> 'sudo service nginx restart',
+	provider => shell,
 }
