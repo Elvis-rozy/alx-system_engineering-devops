@@ -1,4 +1,3 @@
-Toggle navigation
 0x14. MySQL
 DevOps
 SysAdmin
