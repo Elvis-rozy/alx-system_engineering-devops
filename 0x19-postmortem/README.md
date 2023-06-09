@@ -2,23 +2,23 @@
 
 Postmortem: Server Overload Outage
 
-Date: [Date of the outage]
-Duration: [Duration of the outage]
+Date: 15th May, 2023.
+Duration: 4hrs: 40mins: 13secs [04:40:13]
 
 Summary:
 
-On [date], our system experienced a server overload outage that resulted in a complete disruption of service for our users. The outage lasted for [duration], during which time our servers were unable to handle the high volume of incoming requests, leading to degraded performance and ultimately causing the system to become unresponsive. This postmortem aims to provide a detailed analysis of the incident, its root causes, and the steps taken to prevent similar occurrences in the future.
+On the 15th May, 2023, our system experienced a server overload outage that resulted in a complete disruption of service for our users. The outage lasted for exactly  4hrs: 40mins: 13secs, during which time our servers were unable to handle the high volume of incoming requests, leading to degraded performance and ultimately causing the system to become unresponsive. This postmortem aims to provide a detailed analysis of the incident, its root causes, and the steps taken to prevent similar occurrences in the future.
 
 Timeline of Events:
 
-[Start time]: The system started experiencing a sudden surge in incoming requests.
-[Time]: The server's CPU utilization rapidly increased, leading to degraded performance.
-[Time]: The server reached its maximum capacity, causing the system to become unresponsive.
-[Time]: The incident was detected by our monitoring system, and the response team was alerted.
-[Time]: The response team initiated investigations to identify the cause of the server overload.
-[Time]: Steps were taken to distribute the incoming traffic across multiple servers to alleviate the load.
-[Time]: The server load gradually decreased, and the system started recovering.
-[End time]: The system was fully restored, and normal operations resumed.
+03:19:45 : The system started experiencing a sudden surge in incoming requests.
+03:52:05 : The server's CPU utilization rapidly increased, leading to degraded performance.
+04:04:43 : The server reached its maximum capacity, causing the system to become unresponsive.
+04:05:07 : The incident was detected by our monitoring system, and the response team was alerted.
+04:11:37 : The response team initiated investigations to identify the cause of the server overload.
+05:36:01 : Steps were taken to distribute the incoming traffic across multiple servers to alleviate the load.
+06:45:57 : The server load gradually decreased, and the system started recovering.
+07:59:58 : The system was fully restored, and normal operations resumed.
 
 Root Causes:
 
@@ -41,4 +41,4 @@ Monitoring and Alerting: We have enhanced our monitoring systems to provide real
 Incident Response and Escalation: We have refined our incident response procedures to ensure a swift and coordinated response during critical incidents. Clear escalation paths, defined roles and responsibilities, and improved communication channels have been established to minimize downtime and facilitate prompt resolution.
 
 Conclusion:
-The server overload outage served as a valuable learning experience for our team. We have implemented various measures to mitigate similar incidents in the future, focusing on scalability, performance optimization, traffic management, and enhanced monitoring. By continuously monitoring and refining our systems, we aim to provide seamless connection great customer service.
+The server overload outage served as a valuable learning experience for our team. We have implemented various measures to mitigate similar incidents in the future, focusing on scalability, performance optimization, traffic management, and enhanced monitoring. By continuously monitoring and refining our systems, we aim to provide seamless connection and great customer service.
